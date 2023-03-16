@@ -15,9 +15,7 @@ time = 11.8--> litres = 5
 
  */
 
-const litres = time => {
-	return Math.floor(time * 0.5);
-}
+const litres = time => Math.floor(time * 0.5);
 
 console.log(litres(3));
 console.log(litres(6.7));
