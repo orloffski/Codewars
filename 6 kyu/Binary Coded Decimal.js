@@ -33,4 +33,4 @@ const toBinary = number => {
 }
 
 console.log(toBcd(10));
-console.log(toBcd(-10));
+console.log(toBcd(123456));
