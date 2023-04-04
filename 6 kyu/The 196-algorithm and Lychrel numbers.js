@@ -32,15 +32,18 @@ Your task
     Your code should be able to handle Lychrel number candidates (numbers for which the 196-algorithm won't stop in a reasonable amount of time). Hint: The number 1,186,060,307,891,929,990 takes 261 iterations in order to end up in a 119-digit palindrome which is the record for every number successfully calculated by anyone so far.
     The function should return the resulting palindrome as an integer or -1 if the number is a Lychrel number candidate.
 
-
  */
 
 const alg196 = n => {
+	let step = 1;
+
 	do{
 		let add = n.toString().split('').reverse().join('');
 		n += Number(add);
 
-		if(n > 1000000000000){
+		step++;
+
+		if(step > 196){
 			n = -1;
 			break;
 		}
