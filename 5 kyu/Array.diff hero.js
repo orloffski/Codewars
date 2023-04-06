@@ -15,6 +15,8 @@ arrayDiffVeryFast([1,2,2,2,3],[2]) == [1,3]
  */
 
 const arrayDiffVeryFast = (a, b) => {
+	b = Array.from(new Set(b));
+
 	return a.reduce((accum, currItem) => {
 		if(!b.includes(currItem)){
 			accum.push(currItem)
